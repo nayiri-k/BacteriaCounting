@@ -23,7 +23,7 @@
 ## Setup
 1. Navigate to this folder in MATLAB
 2. Select all folders in this directory > Right Click > Add to Path > Selected Folders
-3. Run desired matlab file
+3. Run desired MATLAB file (comments within file may offer further instructions)
 
 ## Results
 Read a summary of the results in Shewanella_Bacteria_Counting_Report.pdf in this repo
