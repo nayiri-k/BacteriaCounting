@@ -38,7 +38,7 @@ end
 % NOTE: at this point, save tiff_stack as tiff_stack.mat in workplace
 % so you can reload this and skip previous steps (for faster computation)
 %% SKELETONIZE AND COMPUTE LENGTHS
-skel3D = Skeleton3D(tiff_stack);
+skel3D = Skeleton3D(logical(tiff_stack));
 [L3D,n3D] = bwlabeln(skel3D);
 [x,y,z] = size(tiff_stack);
 cellLengths = zeros(n3D,1);
@@ -66,7 +66,13 @@ end
  x = skel3DLengths(:,:,1);
  y = skel3DLengths(:,:,2);
  z = skel3DLengths(:,:,3);
- figure; plot3(x,y,z);
+% NOTE: at this point, save skel3D as skel3D.mat in workplace
+%       and skel3DLengths as skel3DLengths.mat in workplace
+%       so you quickly load them into the MATLAB volume viewer 
+%       (see next section)
 
-
+%% Viewing 3D
+% Open MATLAB Apps > Volume Viewer
+% Import from Workspace > tiff_stack, skel3D, or skel3DLengths
+% The volume is loaded, and can be rotated/zoomed into to view better
 
